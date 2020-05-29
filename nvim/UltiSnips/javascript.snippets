@@ -1,0 +1,177 @@
+snippet const
+const ${1} = ${0}
+endsnippet
+
+snippet let
+let ${1} = ${0}
+endsnippet
+
+snippet re
+${1:const} ${2} = require("${3:module_name}")
+endsnippet
+
+snippet caf
+const ${1:function_name} = (${2}) => {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet af
+(${1}) => {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet cla
+class ${1} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet clax
+class ${1} extends ${2} {
+	${0:${VISUAL}}
+}
+endsnippet
+
+snippet clac
+class ${1} {
+	constructor(${2}) {
+		${0:${VISUAL}}
+	}
+}
+endsnippet
+
+snippet foro "for (const prop of object}) { ... }"
+for (const ${1:prop} of ${2:object}) {
+	${0:$1}
+}
+endsnippet
+
+# Function
+snippet fun
+function ${1:function_name}(${2}) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+# Function
+# Anonymous Function
+snippet f "" w
+function(${1}) {
+	${0:${VISUAL}}
+}
+endsnippet
+# Function
+# Anonymous Function assigned to variable
+snippet vaf
+var ${1:function_name} = function(${2}) {
+	${0:${VISUAL}}
+}
+endsnippet
+# Function
+# Function assigned to variable
+snippet vf
+var ${1:function_name} = function $1(${2}) {
+	${0:${VISUAL}}
+}
+endsnippet
+
+# Flow control
+# if
+snippet if "if (condition) { ... }"
+if (${1:true}) {
+	${0:${VISUAL}}
+}
+endsnippet
+# Function
+# if ... else
+snippet ife "if (condition) { ... } else { ... }"
+if (${1:true}) {
+	${0:${VISUAL}}
+} else {
+	${2}
+}
+endsnippet
+# Function
+# tertiary conditional
+snippet ter
+${1:/* condition */} ? ${2:/* if true */} : ${0:/* if false */}
+endsnippet
+# Function
+# switch
+snippet switch
+switch (${1:expression}) {
+	case '${3:case}':
+		${4}
+	break
+		${0}
+	default:
+		${2}
+}
+endsnippet
+# Function
+snippet case "case 'xyz': ... break"
+case '${1:case}':
+	${0:${VISUAL}}
+	break
+endsnippet
+# Function
+snippet try "try { ... } catch(e) { ... }"
+try {
+	${0:${VISUAL}}
+} catch (${1:e}) {
+	${2:/* handle error */}
+}
+endsnippet
+# Function
+snippet tryf "try { ... } catch(e) { ... } finally { ... }"
+try {
+	${0:${VISUAL}}
+} catch (${1:e}) {
+	${2:/* handle error */}
+} finally {
+	${3:/* be executed regardless of the try / catch result*/}
+}
+endsnippet
+
+# Function
+snippet cl "console.log"
+console.log("JSSII:", ${0})
+endsnippet
+# Function
+snippet clv "console.log var"
+console.log("JSSII -- ${0}:", ${0})
+endsnippet
+
+# Function
+snippet for "for (...) {...}"
+for (var ${1:i} = 0, ${2:len} = ${3:Things.length}; $1 < $2; $1++) {
+	${0:${VISUAL}}
+}
+endsnippet
+# Function
+snippet forr "reversed for (...) {...}"
+for (var ${2:i} = ${1:Things.length} - 1; $2 >= 0; $2--) {
+	${0:${VISUAL}}
+}
+endsnippet
+# Function
+snippet wh "(condition) { ... }"
+while (${1:/* condition */}) {
+	${0:${VISUAL}}
+}
+endsnippet
+# Function
+snippet do "do { ... } while (condition)"
+do {
+	${0:${VISUAL}}
+} while (${1:/* condition */});
+endsnippet
+# Function
+# For in loop
+snippet fori
+for (var ${1:prop} in ${2:object}) {
+	${0:$2[$1]}
+}
+endsnippet
